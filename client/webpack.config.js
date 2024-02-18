@@ -15,6 +15,9 @@ module.exports = () => {
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
     },
+    stats: {
+      children:true,
+    },
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
