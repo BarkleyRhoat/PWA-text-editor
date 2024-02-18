@@ -22,7 +22,7 @@ module.exports = () => {
         chunks: ["main"],
       }),
       new HtmlWebpackPlugin({
-        template: "./src/install.html",
+        template: "./install.html",
         filename: "install.html",
         chunks: ["install"],
       }),
