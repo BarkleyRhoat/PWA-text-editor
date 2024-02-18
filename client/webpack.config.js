@@ -24,11 +24,11 @@ module.exports = () => {
         filename: "index.html",
         chunks: ["main"],
       }),
-      new HtmlWebpackPlugin({
-        template: "./src/client/install.html",
-        filename: "install.html",
-        chunks: ["install"],
-      }),
+      // new HtmlWebpackPlugin({
+      //   template: "./src/client/install.html",
+      //   filename: "install.html",
+      //   chunks: ["install"],
+      // }),
       new WebpackPwaManifest({
         name: "PWA Text Editor",
         short_name: "Text Editor",
