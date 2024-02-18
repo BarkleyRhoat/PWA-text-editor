@@ -16,16 +16,16 @@ module.exports = () => {
       path: path.resolve(__dirname, "dist"),
     },
     stats: {
-      children:true,
+      children: true,
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./index.html",
+        template: "./src/client/index.html",
         filename: "index.html",
         chunks: ["main"],
       }),
       new HtmlWebpackPlugin({
-        template: "./install.html",
+        template: "./src/client/install.html",
         filename: "install.html",
         chunks: ["install"],
       }),
