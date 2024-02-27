@@ -61,13 +61,13 @@ module.exports = () => {
           use: ["style-loader", "css-loader"],
         },
         {
-          test: /\.js$/,
+          test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
             loader: "babel-loader",
             options: {
               presets: ["@babel/preset-env"],
-              plugins: ["@babel/plugin-transform-runtime"],
+              plugins: ["@babel/plugin-proposal-object-rest-spread", "@babel/plugin-transform-runtime"],
             },
           },
         },
