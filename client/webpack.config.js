@@ -15,9 +15,9 @@ module.exports = () => {
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
     },
-    stats: {
-      children: true,
-    },
+    // stats: {
+    //   children: true,
+    // },
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
@@ -25,6 +25,10 @@ module.exports = () => {
       }),
      
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        start_url: "./",
+        publicPath: "./",
         name: "PWA Text Editor",
         short_name: "Text Editor",
         description: "A progressive web app text editor",
@@ -42,10 +46,10 @@ module.exports = () => {
         swSrc: "./src-sw.js",
         swDest: "src-sw.js",
       }),
-      new WorkboxWebpackPlugin.GenerateSW({
-        clientsClaim: true,
-        skipWaiting: true,
-      }),
+      // new WorkboxWebpackPlugin.GenerateSW({
+      //   clientsClaim: true,
+      //   skipWaiting: true,
+      // }),
     ],
 
     module: {
